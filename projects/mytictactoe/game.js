@@ -126,6 +126,7 @@ function checkForWinner(move) {
     }
     return result;
 }
+
 /**
  * This function checks if a winning condition is satisfied
  * @param a First element in winning condition
@@ -142,6 +143,7 @@ function checkRow(a, b, c, move) {
     }
     return result;
 }
+
 /**
  * This function gets the current state of the board as a Board object
  * @param rank This stores the rank of the Board object that is being created
