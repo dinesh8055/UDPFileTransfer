@@ -45,9 +45,9 @@ function setMessage(msg) {
  * @param square This parameter stores the position in the board
  */
 function nextMove(square) {
-    moveOptions = [];
     humanMove(square);
     window.setTimeout(computerMove, 1000);
+    document.moveOptions = []; //move options should be empty when the game ends
 }
 
 /**
@@ -79,8 +79,8 @@ function computerMove() {
     }
     board = getBoard(999, "O");
     theMove = miniMax(board);
-    bestMove = getBestMove(moveOptions, theMove.rank); //selects the best move from the available options
-    if (bestMove === 0) {//checks if there are any further empty squares
+    bestMove = getBestMove(document.moveOptions, theMove.rank); //selects the best move from the available options
+	if (bestMove === 0) {//checks if there are any further empty squares
         setMessage("The game ended in a draw!");
     }
     else {
@@ -200,7 +200,7 @@ function move(position) {
     document.getElementById("s" + position).innerText = document.turn;
 }
 
-var moveOptions = [];   //Used for storing different options for next move
+//var moveOptions = [];   //Used for storing different options for next move
 /**
  * This function is the minimax algorithm which calculates an unbeatable move
  * @param board This stores the Board for the minimax algorithm
@@ -242,7 +242,7 @@ function miniMax(board) {
         else {
             board.rank = getMax(childrenOptions);
         }
-        moveOptions = childrenOptions;
+        document.moveOptions = childrenOptions;
         return board;
     }
     return board;
