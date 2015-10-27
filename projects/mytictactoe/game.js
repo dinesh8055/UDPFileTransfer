@@ -1,6 +1,6 @@
 /**
  * @fileoverview This file contains the javascript code for the 
- *		unbeatable Tic-tac-toe game.
+ *     unbeatable Tic-tac-toe game.
  * @author Dinesh Gudi
  * @Version: 
  *     $Id: game.js , Version 1.0 10/27/2015 $ 
