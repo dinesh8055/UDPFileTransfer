@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tic-tac-toe</title>
+	<script src="game.js"></script>
+    <style>
+        .Square {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 18pt;
+            font-weight: bold;
+            font-family: Verdana;
+        }
+    </style>
+</head>
+
+<body onload="startGame();">
+<h1>Welcome to my Tic-Tac-Toe game!</h1>
+
+<div id="message">messages will go here</div>
+
+<table border="1">
+    <tr>
+        <td id="s1" class="Square" onclick="nextMove(this);"></td>
+        <td id="s2" class="Square" onclick="nextMove(this);"></td>
+        <td id="s3" class="Square" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+        <td id="s4" class="Square" onclick="nextMove(this);"></td>
+        <td id="s5" class="Square" onclick="nextMove(this);"></td>
+        <td id="s6" class="Square" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+        <td id="s7" class="Square" onclick="nextMove(this);"></td>
+        <td id="s8" class="Square" onclick="nextMove(this);"></td>
+        <td id="s9" class="Square" onclick="nextMove(this);"></td>
+    </tr>
+</table>
+<a href="javascript:startGame();">Start Over</a>
+</body>
+</html>
