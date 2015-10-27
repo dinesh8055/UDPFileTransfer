@@ -74,13 +74,13 @@ function computerMove() {
     var theMove;
     var bestMove;
 
-    if (document.victor != " "){
+    if (document.victor != " "){//checks if we already have a winner
         return;
     }
     board = getBoard(999, "O");
     theMove = miniMax(board);
-    bestMove = getBestMove(moveOptions, theMove.rank);
-    if (bestMove === 0) {
+    bestMove = getBestMove(moveOptions, theMove.rank); //selects the best move from the available options
+    if (bestMove === 0) {//checks if there are any further empty squares
         setMessage("The game ended in a draw!");
     }
     else {
@@ -217,7 +217,7 @@ function miniMax(board) {
         children = getChildren(board, "X");
     }
 
-    if (children.length === 0) {
+    if (children.length === 0) {//checks if there are any further vacant squares
         if (checkForBoardWinner(board)) {
             if (board.turn === "X") {
                 board.rank = 10;
