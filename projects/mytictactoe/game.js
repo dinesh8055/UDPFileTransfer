@@ -200,7 +200,6 @@ function move(position) {
     document.getElementById("s" + position).innerText = document.turn;
 }
 
-//var moveOptions = [];   //Used for storing different options for next move
 /**
  * This function is the minimax algorithm which calculates an unbeatable move
  * @param board This stores the Board for the minimax algorithm
