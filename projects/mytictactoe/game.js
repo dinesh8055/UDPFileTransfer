@@ -1,4 +1,16 @@
 /**
+ * @fileoverview This file contains the javascript code for the 
+ *		unbeatable Tic-tac-toe game.
+ * @author Dinesh Gudi
+ * @Version: 
+ *     $Id: game.js , Version 1.0 10/27/2015 $ 
+ * 
+ * Revisions: 
+ *     $Log Initial Version $ 
+ */
+
+
+/**
  * This is an initialization function which initializes the board
  */
 function startGame() {
